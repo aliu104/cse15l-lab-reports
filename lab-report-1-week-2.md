@@ -27,5 +27,8 @@ Once we are in the server, notice how our prompt in the terminal is different fr
 ![Screenshot](labreport1-3.2.png)
 3. `touch <new filename>` creates a new file in the current directory. If we run `ls`, we can see the new file we created.
 ![Screenshot](labreport1-3.3.png)
-4. Let's get out of the `folder` directory with the command `cd ..`. Notice how the prompt changes back to what we had earlier.
+4. Let's get out of the `folder` directory with the command `cd ..`. To get out of the SSH server, enter `exit` into the terminal. Notice how the prompt changes back to what we had earlier.
 ![Screenshot](labreport1-3.4.png)
+
+### **Moving Files over `SSH` with `scp`**
+1. Enter `scp <filename> <account email>`to copy a file from our client into our `ssh accounts.
