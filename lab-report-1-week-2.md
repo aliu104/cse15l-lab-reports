@@ -33,18 +33,18 @@ Once we are in the server, notice how our prompt in the terminal is different fr
 ### **Moving Files Over `SSH` With `scp`**
 1. Let's first run a file from our client to see what it will output.
 ![Screenshot](labreport1-screenshots/labreport1-4.1.png)
-2. Let's make a change to this file and copy this file into our `ssh` accounts. Enter `scp <filename> <account email>:~/` to do so. You will be prompted to enter your password in order to complete this step.
+2. Let's make a change to this file and copy this file into our `ssh` account. Enter `scp <filename> <account email>:~/` to do so. You will be prompted to enter your password in order to complete this step.
 ![Screenshot](labreport1-screenshots/labreport1-4.2.png)
-3. Now, let's go back to our server and check whether the copied file is in our `ssh` accounts. 
+3. Now, let's go back to our server and check whether the copied file is in our `ssh` account. 
 ![Screenshot](labreport1-screenshots/labreport1-4.3.png)
 4. Run the copied file in the server. The change we made in step 2 should be reflected.
 ![Screenshot](labreport1-screenshots/labreport1-4.4.png)
 
 ### **Setting an `SSH` Key**
-The process of making a change to a file, saving it, copying it to a server, and then checking if all of those actions were successful would take a long time. We can set up `ssh` keys to speed up this process by eliminating the step of typing our password.
-1. Exit out of your `ssh` accounts. On your client server. Enter the command `ssh-keygen`.
+The process of making a change to a file, saving it, copying it to a server, and then checking if all of those actions were successful takes a long time. We can set up `ssh` keys to speed up this process by eliminating the step of typing our password.
+1. Exit out of your `ssh` accounts. On your client server, enter the command `ssh-keygen`.
 ![Screenshot](labreport1-screenshots/labreport1-5.1.png)
-2. You will be prompted to enter where to save the key. Enter whatever directory is in the parentheses.Afterwards, you will be prompted to enter a passphrase. We can skip this step by just pressing enter.
+2. You will be prompted to enter where to save the key. Enter whatever directory is in the parentheses. Afterwards, you will be prompted to enter a passphrase. We can skip this step by just pressing enter.
 ![Screenshot](labreport1-screenshots/labreport1-5.2.png)
 3. Your computer's `.ssh` directory should now contain the private (`id_rsa`) and public key (`id_rsa.pub`). The next step is to copy the public key into the `.ssh` directory in your server. You can do this by entering the following: `scp <directory of public key> <account email>:~/.ssh/authorized_keys`. You will then be prompted to enter your password.
 ![Screenshot](labreport1-screenshots/labreport1-5.3.png)
@@ -54,11 +54,12 @@ The process of making a change to a file, saving it, copying it to a server, and
 ### **Optimizing Remote Running**
 With the usage of `ssh` keys, we can now simplify the process of copying a file from client to server and running it in the server.
 
-Let's make a change to our file in our client. Note that we can separate commands with semicolons and complete a command in the server by putting it in quotes after your `ssh` commands.
+Let's make a change to our file in our client. 
+> Note that we can separate commands with semicolons and complete a command in the server without changing prompts by putting it in quotes after your `ssh` commands.
 
 To copy a file from client to server, we can type the following command on one line.
 ```
 scp Hello.java cs15lwi22amh@ieng6.ucsd.edu:~/; ssh cs15lwi22amh@ieng6.ucsd.edu "javac Hello.java; java Hello"
 ```
-Your result should reflect the change you made remotely.
+Your result should reflect the change you made remotely:
 ![Screenshot](labreport1-screenshots/labreport1-6.png)
