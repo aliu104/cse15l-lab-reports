@@ -64,3 +64,14 @@ scp Hello.java cs15lwi22amh@ieng6.ucsd.edu:~/; ssh cs15lwi22amh@ieng6.ucsd.edu "
 ```
 Your result should reflect the change you made remotely:
 ![Screenshot](labreport1-screenshots/labreport1-6.png)
+
+Assuming that we have typed out the `scp`, `ssh`, `javac`, and `java` command previously in the terminal, our optimization of the process will cost only 9 keystrokes, as opposed to using over 20 keystrokes from our process before:
+- up arrow on keyboard to get the `scp Hello.java cs15lwi22amh@ieng6.ucsd.edu:~/` command
+- typing out `; `
+- up arrow on keyboard to get the `ssh cs15lwi22amh@ieng6.ucsd.edu` command
+- typing out `"`
+- up arrow on keyboard to get the `javac Hello.java` command
+- typing out `; `
+- up arrow on keyboard to get the `java Hello` command
+- typing out `"`
+- hitting enter to run the command
