@@ -11,7 +11,7 @@
 > javac MarkdownParse.java
 > java MarkdownParse faulty-file1.md
 ```
-- The failure inducing input is a file with a set of parentheses inside a set of bracket. The bug here comes from the program's inability to find parentheses after the closing bracket. This causes the symptom of an infinite loop as the program attempts to access characters in the string that aren't there.
+- The failure inducing input is a file with a set of parentheses inside a set of brackets. The bug here comes from the program's inability to find parentheses after the closing bracket. This causes the symptom of an infinite loop as the program attempts to access characters in the string that aren't there.
 
 --
 ### **Code Change #2**: No Closing Bracket
