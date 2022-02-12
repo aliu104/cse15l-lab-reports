@@ -20,7 +20,7 @@
 - Program symptom:
 ```
 > javac MarkdownParse.java
-> java MarkdownParse faulty-file1.md
+> java MarkdownParse faulty-file2.md
 ```
 - The failure inducing input is a file with an opening bracket, set of parentheses, but no closing bracket. The bug here comes from the program's inability to find the closing bracket anywhere in the file. This causes the symptom of an infinite loop as the program attempts to access the closing bracket, which doesn't exist.
 
