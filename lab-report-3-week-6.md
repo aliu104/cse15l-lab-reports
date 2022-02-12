@@ -6,14 +6,16 @@
 ### **Setting Up `SSH` Configuration**
 Let's open up the `.ssh/config` file on your computer.
 ![Screenshot](labreport3-screenshots/labreport3b-1.1.png)
+
 Add the following lines to the file in order to create a "nickname" for your course-specific account.
 ![Screenshot](labreport3-screenshots/labreport3b-1.2.png)
+
 
 
 ### **Trying Out Server "Nickname"**
 Now, let's try to enter your server with your nickname. (Mine is `ieng6`)
 ![Screenshot](labreport3-screenshots/labreport3b-2.1.png)
-We have successfully, logged into our server. 
+We have successfully logged into our server. 
 
 Let's exit the server and try to copy a file from our client to server using our server "nickname."
 ![Screenshot](labreport3-screenshots/labreport3b-2.2.png)
